@@ -1,0 +1,41 @@
+@import "../../vars.less";
+
+.li-add {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  list-style: none;
+  min-height: 300px;
+
+  button {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    outline: 0;
+    border: 0;
+    margin: 0;
+    cursor: pointer;
+    user-select: none;
+    font-weight: 500;
+    font-size: 2.2rem;
+    line-height: 1.75;
+    text-transform: uppercase;
+    min-height: 36px;
+    transition: all 400ms;
+    border-radius: 50%;
+    width: 70px;
+    height: 70px;
+    box-shadow: @button-shadow;
+    color: @white;
+    background-color: @blue;
+    &:hover {
+      background-color: @blue-hover;
+    }
+  }
+
+  @media (hover: none) {
+    button:hover {
+      background-color: @blue;
+    }
+  }
+}

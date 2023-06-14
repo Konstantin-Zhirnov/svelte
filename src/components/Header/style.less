@@ -1,0 +1,32 @@
+@import "../../vars.less";
+
+header {
+  transition: box-shadow 300ms cubic-bezier(0.4, 0, 0.2, 1) 0ms;
+  box-shadow: @box-shadow;
+  display: flex;
+  align-items: center;
+  width: 100%;
+  box-sizing: border-box;
+  flex-shrink: 0;
+  position: static;
+  background-color: @blue;
+  color: @white;
+  padding: 4px 16px;
+  margin-bottom: 24px;
+
+  img {
+    width: 60px;
+    height: 60px;
+  }
+
+  p {
+    font-size: 1.5rem;
+    margin-left: 20px;
+  }
+}
+
+@media (min-width: 600px) {
+  header {
+    padding: 4px 24px;
+  }
+}

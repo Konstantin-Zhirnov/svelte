@@ -1,0 +1,87 @@
+@import "../../vars.less";
+
+.card-li {
+  background-color: @white;
+  border-radius: 4px;
+  box-shadow: @card-shadow;
+  color: @black;
+  flex-direction: column;
+  justify-content: space-between;
+  overflow: hidden;
+  width: 100%;
+  position: relative;
+
+  .intensifier {
+    position: absolute;
+    top: 10px;
+    right: 16px;
+    color: @blue;
+    font-weight: 500;
+    font-size: 1.6rem;
+  }
+
+  .img_wrapper {
+    width: 100%;
+    height: 200px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    img {
+      width: 200px;
+      height: 200px;
+      z-index: 1;
+    }
+  }
+  figcaption {
+    padding: 0 16px 16px;
+    p {
+      margin-bottom: 0.4rem;
+    }
+    .origin {
+      color: @light-gray;
+    }
+    .blend_name {
+      font-weight: 600;
+      font-size: 1.3rem;
+    }
+    .card-ul {
+      display: flex;
+      gap: 8px;
+      overflow: auto;
+      padding: 12px 2px 8px
+    }
+  }
+
+  .loader-wrapper {
+    position: absolute;
+    background-color: @white;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    .loader {
+      width: 48px;
+      height: 48px;
+      border: 5px solid @loader-border;
+      border-bottom-color: transparent;
+      border-radius: 50%;
+      display: inline-block;
+      box-sizing: border-box;
+      animation: rotation 1s linear infinite;
+    }
+  }
+
+
+  @keyframes rotation {
+    0% {
+      transform: rotate(0deg);
+    }
+    100% {
+      transform: rotate(360deg);
+    }
+  }
+}
